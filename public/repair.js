@@ -33,6 +33,12 @@ function loadDepartments() {
     <option value="IT部">IT部</option>
     <option value="行政部">行政部</option>
     <option value="财务部">财务部</option>
+    <option value="儿科">儿科</option>
+    <option value="妇科">妇科</option>
+    <option value="产科">产科</option>
+    <option value="手术室">手术室</option>
+    <option value="收费处">收费处</option>
+    <option value="挂号处">挂号处</option>
   `;
 
   if (errorBox) errorBox.style.display = 'none';

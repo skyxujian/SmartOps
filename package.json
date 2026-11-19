@@ -1,0 +1,11 @@
+{
+  "name": "smartops", "version": "1.0.0", "private": true, "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env.local dev.js",
+    "db:migrate": "node --env-file=.env.local scripts/migrate.js",
+    "admin:create": "node --env-file=.env.local scripts/create-admin.js",
+    "test": "node --env-file=.env.local --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": { "better-auth": "1.7.26", "express": "5.3.0", "pg": "8.23.1" }
+}
