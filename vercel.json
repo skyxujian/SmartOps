@@ -1,10 +1,18 @@
 {
+  "framework": "express",
+  "headers": [{
+    "source":"/(.*)",
+    "headers":[
+      {"key":"X-Content-Type-Options","value":"nosniff"},
+      {"key":"X-Frame-Options","value":"DENY"},
+      {"key":"Referrer-Policy","value":"same-origin"},
+      {"key":"Cache-Control","value":"no-store"},
+      {"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://calm-mountain-16aa.skyxujian09102.workers.dev; img-src 'self' data:; form-action 'self'; frame-ancestors 'none'; base-uri 'none'"}
+    ]
+  }],
   "redirects": [
-    {
-      "source": "/",
-      "destination": "/repair.html",
-      "permanent": false
-    },
+    {"source":"/repair.html","destination":"/report.html","permanent":false},
+    {"source":"/repair/index.html","destination":"/report.html","permanent":false},
     {
       "source": "/repair",
       "destination": "/repair.html",
